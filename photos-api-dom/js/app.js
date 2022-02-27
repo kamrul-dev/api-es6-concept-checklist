@@ -16,7 +16,7 @@ const displayPhotos = (photos) => {
         div.classList.add("col");
         div.innerHTML = `
             <div class="card photo-card  h-100 p-2">
-                <img src="${photo.url}" class="card-img-top" alt="...">
+                <img src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
                 <div class = "text-center"><span class="badge bg-secondary">${photo.id}</span></div>
             </div>
         `;
