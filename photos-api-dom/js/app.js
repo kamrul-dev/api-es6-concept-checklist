@@ -8,16 +8,19 @@ loadPhotos();
 
 // display photos on UI
 const displayPhotos = (photos) => {
-    console.log(photos);
-    photos.forEach(photo => {
+    const getPhotos = photos.slice(0, 100);
+    console.log(getPhotos);
+    getPhotos.forEach(photo => {
+        const divSection = document.getElementById('display-photos');
         const div = document.createElement('div');
-        div.classList.add("row");
+        div.classList.add("col");
         div.innerHTML = `
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
+            <div class="card photo-card  h-100 p-2">
+                <img src="${photo.url}" class="card-img-top" alt="...">
+                <div class = "text-center"><span class="badge bg-secondary">${photo.id}</span></div>
             </div>
-        </div>
         `;
+        divSection.appendChild(div);
+
     })
 }
