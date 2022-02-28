@@ -33,14 +33,17 @@ const loadPhotDetails = (id) => {
 
 // display photo details
 const displayPhotoDetails = (details) => {
-    document.getElementById('photo-details').innerHTML = `
-    <img src="${details.url}" class="" alt="...">
-    <img src="${details.thumbnailUrl}" class="" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">${details.title}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-            card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    `;
+   const detailsPhoto = document.getElementById('photo-details');
+   const div = document.createElement('div');
+   detailsPhoto.textContent = '';
+   div.classList.add("details-photo")
+   div.innerHTML = `
+   <img src="${details.url}" class="mb-3" alt="...">
+   <img src="${details.thumbnailUrl}" class="" alt="...">
+   <div class="card-body">
+       <h5 class="card-title">${details.title}</h5>
+   </div>
+   <div class = "text-center"><span class="badge bg-secondary">${details.id}</span></div>
+   `;
+   detailsPhoto.appendChild(div);
 }

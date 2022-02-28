@@ -7,3 +7,11 @@
     box-shadow: rgba(211, 11, 11, 0.16) 0px 1px 4px, rgb(122, 214, 16) 0px 0px 0px 3px;
     transition: 0.5s;
 }
+
+.details-photo{
+    border:  2px solid tomato;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px;
+}
